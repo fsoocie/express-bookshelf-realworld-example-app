@@ -15,8 +15,8 @@ jobs:
         run: |
           echo 'test print'
           echo 'SSH_KNOWN_HOSTS'
-          echo 'env._KNOWN_HOSTS'
-          echo 'env.SSH_PRIVATE_KEY'
+          echo $KNOWN_HOSTS
+          echo $SSH_PRIVATE_KEY
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 700 ~/.ssh
